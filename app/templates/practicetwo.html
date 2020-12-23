@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .bg {
+            background-image: url("{{ url_for('static',filename='img/radiohead.jpg') }}");
+
+            height: 100%;
+            
+            background-position: center;
+            background-repeat: no-repeat;   
+            background-size: cover;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="col-md-8 mt-5">
+        <h4>
+            <p class="text-white">Who are Joe's favorite bands or musicians from the 90s? Type in your guess below to
+                see!
+            </p>
+        </h4>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Type in a Band or Musician"
+                aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+    </div>
+    </form>
+    <p style='text-align:center'>
+        <iframe src="https://open.spotify.com/embed/playlist/3UCGkYJtlW30lP1WNmNS5z" width="300" height="380"
+            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
+</body>
+
+</html>

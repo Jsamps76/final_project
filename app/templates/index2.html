@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<h1>Hello, {{ current_user.username }}</h1>
+
+{% for post in posts %}
+<h3><a href="{{ url_for('band_detail', post_id=post.id) }}">{{ post.title }}</a></h3>
+<p>{{ post.content }}</p>
+{% endfor %}
+
+{% else %}
+<h1>Hello, please register for my cool site</h1>
+<p>To guess bands Joe likes, you have to be logged in!</p>
+{% endif %}
+
+
+{% endblock content %}

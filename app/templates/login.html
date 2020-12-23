@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Hello, new user. Please register here</h1>
+
+<!-- Sign Up Form from Flask route  -->
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        
+        <fieldset>
+            {{ form.email.label }}
+            {{ form.email(class='form-control', placeholder='Email') }}
+        </fieldset>
+        <fieldset>
+            {{ form.password.label }}
+            {{ form.password(class='form-control', placeholder='Password') }}
+        </fieldset>
+        <fieldset>
+            {{ form.remember_me.label }}
+            {{ form.remember_me(class='form-check-input', placeholder='Remember Me') }}
+        </fieldset>
+        {{ form.submit(class='btn btn-primary btn-block') }}
+    </div>
+</form>
+
+{% endblock content %}
